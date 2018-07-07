@@ -10,6 +10,8 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <%= content_for?(:content) ? yield(:content) : yield %>
+    </div>
   </body>
 </html>
