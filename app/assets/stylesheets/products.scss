@@ -5,9 +5,9 @@
 #products-page {
   .products {
     text-align: center;
-
-    &:empty + .hidden {
-      display: block;
+    
+    .results {
+      text-align: center;
     }
 
     .product {

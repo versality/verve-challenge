@@ -8,7 +8,6 @@ class ProductsSearchController < ApplicationController
       "%#{params['query']}%"
     )
     .order(params[:order])
-    .first(10)
   end
 end
 

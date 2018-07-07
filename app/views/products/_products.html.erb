@@ -1,0 +1,7 @@
+<div class="results">
+  Total Results: <span><%= @products.count %></span>
+</div>
+
+<div class="row">
+  <%= render partial: 'products/product', collection: @products.first(10) %>
+</div>
