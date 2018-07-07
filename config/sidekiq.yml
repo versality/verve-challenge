@@ -1,0 +1,4 @@
+:schedule:
+  product_sync_job:
+    cron: '*/10 * * * *' # Runs once per 10 minutes
+    class: ProductSyncJob
