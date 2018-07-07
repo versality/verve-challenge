@@ -32,6 +32,9 @@ In normal case scenario, a lot of solutions would have been done differently wit
 ### Specs
 Due to limited amount of time and desire to meet 100% coverage - feature tests were used cover as much functionality as possible at the cost of performance.
 Ideally, hybrid approach using more unit tests would be a better fit test, bringing better spec error reporting as well higher testing speed.
+
+Also specs heavily rely on pre-configured cassettes.
+For some of the tests something like factory_bot might have been a better choice, but again, due to limited time, this solution has it's strenght as it works with the actual API response rather than mock data.
 ### API Fetching
 `Her` was picked to avoid writing low detail API wrapper as of this scope we only needed read without a need to construct complicated REST operations.
 ### Data
