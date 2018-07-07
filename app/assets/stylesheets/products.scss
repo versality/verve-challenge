@@ -1,0 +1,34 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#products-page {
+  .products {
+    text-align: center;
+
+    &:empty + .hidden {
+      display: block;
+    }
+
+    .product {
+      padding: 30px 0;
+      border-bottom: solid #dee2e6 1px;
+
+      .content {
+        margin: 10px 0;
+      }
+
+      &.out-of-stock {
+        opacity: 0.6;
+
+        img {
+          filter: grayscale(100%);
+        }
+      }
+
+      img {
+        height: 400px;
+      }
+    }
+  }
+}
