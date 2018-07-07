@@ -12,7 +12,7 @@
 ## Task Spec
 
 - [x]  User can search through products based on name or region
-- [x]  Search should be case insensitive, and trigger only after you enter at least 3 characters
+- [x]  Search should be case insensitive
 - [x]  Search should trigger only after you enter at least 3 characters
 - [x]  Search should ignore single and double quotes when searching
 - [x]  Allow products sorting by name and price (both ascending and descending)
