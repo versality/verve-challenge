@@ -33,9 +33,22 @@ In normal case scenario, a lot of solutions would have been done differently wit
 Due to limited amount of time and desire to meet 100% coverage - feature tests were used cover as much functionality as possible at the cost of performance.
 Ideally, hybrid approach using more unit tests would be a better fit test, bringing better spec error reporting as well higher testing speed.
 
+###### What can be improved
+* Specs should be less tied to the actual API data, using real names.
+If API will get a version update, after cassettes update products can be different, that might require to update all rspec expected values. So if API change versions often, rspec expect values should be more flexible.
+
 Also specs heavily rely on pre-configured cassettes.
 For some of the tests something like factory_bot might have been a better choice, but again, due to limited time, this solution has it's strenght as it works with the actual API response rather than mock data.
+
 ### API Fetching
 `Her` was picked to avoid writing low detail API wrapper as of this scope we only needed read without a need to construct complicated REST operations.
+
+###### What can be improved
+* Replace Her with Faraday and implement proper API wrapper to give more flexibility
+
 ### Data
-Data is being fetched by ActiveJob every 10 minutes with 5 minutes ahead bonus in case if API is down or fetch would take longer than expected. 
+Data is being fetched by ActiveJob every 10 minutes with 5 minutes ahead bonus in case if API is down or fetch would take longer than expected.
+
+### Frontend
+For the scope of this task jQuery + js.erb were picked to solve the front-end requirements.
+Even though it might have been a good opportunity to show React or Vue.js expertise, from software design perspective it would be a major overkill and a sign of overengineering.
